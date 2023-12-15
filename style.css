@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Canterbury';
+    src: url('Asset/font/Canterbury.ttf') format('ttf');
+    font-weight: normal;
+    /* Adjust as needed */
+    font-style: normal;
+    /* Adjust as needed */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#scrollToTop {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #E1E1E1;
+    border: 2px solid #242424;
+    /* Set a background color */
+    color: white;
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* Rounded corners */
+    color: #242424;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Increase font size */
+    background-image: linear-gradient(to right, #E1E1E1 50%, #242424 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+}
+
+#scrollToTop:hover {
+    background-position: -100% 0;
+    color: #E1E1E1;
+    transition: background-position 0.5s, color 0.5s;
+}
+
+
+.navbar-container {
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    /* width: 100svw; */
+    height: 88px;
+    border: 2px solid #242424;
+    border-left: none;
+    border-right: none;
+    padding-left: 20px;
+    background-color: #E1E1E1;
+}
+
+.navbar-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-inner h1 {
+    color: #242424;
+}
+
+.navbar-items {
+    height: 100%;
+    width: 50svw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.navbar-items a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    border: 2px solid #242424;
+    border-top: none;
+    border-bottom: none;
+    color: #242424;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 6px;
+    background-image: linear-gradient(to right, #E1E1E1 50%, #242424 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+}
+
+.navbar-items a:nth-child(2),
+.navbar-items a:nth-child(4) {
+    border: none;
+}
+
+.navbar-items a:hover {
+    background-position: -100% 0;
+    color: #E1E1E1;
+    transition: background-position 0.5s, color 0.5s;
+}
+
+.navbar-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-item svg {
+    position: relative;
+    top: -20px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #242424;
+    margin: 6px 0;
+}
+
+
+/* HOME */
+
+
+
+.home-marque {
+    background-color: #242424;
+    color: #E1E1E1;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.home-marque svg {
+    vertical-align: baseline;
+}
+
+.home-inner {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+.grid-home-1 {
+    grid-area: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #242424;
+    border-top: none;
+    border-left: none;
+    background-color: #E1E1E1;
+    padding-left: 15px;
+}
+
+.grid-home-1 h5 {
+    font-weight: 300 !important;
+    font-size: clamp(30px, 2vw, 40px);
+    color: #242424;
+    margin: 0;
+}
+
+.grid-home-1 h1 {
+    font-family: 'Bebas Neue';
+    font-size: clamp(80px, 14vw, 230px);
+    font-weight: normal;
+    color: #242424;
+    margin: 0;
+    letter-spacing: -3px;
+    line-height: 80%;
+}
+
+.grid-home-3 {
+    grid-area: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #242424;
+    border-top: none;
+    border-left: none;
+    padding: 15px 40px;
+    background-color: #242424;
+}
+
+.grid-home-3 p {
+    font-weight: 300;
+    font-size: clamp(12px, 1.3vw, 230px);
+    color: #E1E1E1;
+    margin-bottom: 15px;
+}
+
+.grid-home-3 a {
+    display: flex;
+    justify-content: center;
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none;
+    color: #E1E1E1;
+    border: 2px solid #E1E1E1;
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+
+.grid-home-3 a:hover {
+    border: 2px solid #242424;
+    background-color: #E1E1E1;
+    color: #242424;
+}
+
+.grid-home-2 {
+    grid-area: 1 / 2 / span 2;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #242424;
+}
+
+.grid-home-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* About */
+
+
+.about-container {
+    background-image: url(Asset/images/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    overflow: hidden;
+    /* height: 170vh; */
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-title h1 {
+    margin: 0;
+    color: #C7482A;
+    font-family: "Oswald";
+    font-weight: 500 !important;
+    font-size: clamp(80px, 24vw, 350px);
+}
+
+.about-inner {
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+    /* gap: 30px; */
+    /* display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr); */
+}
+
+.about-title-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title-2 h1 {
+    position: relative;
+    font-family: "Bebas Neue";
+    font-size: 225px;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-overflow: ellipsis;
+    background-color: #C7482A;
+    color: #E7B1C9;
+    transform: rotate(180deg);
+    overflow: hidden;
+    padding: 62px 20px;
+    margin: 0;
+}
+
+.about-title-2 h1::after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 70%;
+    rotate: 127deg;
+    width: 120px;
+    height: 120px;
+    background: url('Asset/images/smile-face.svg') no-repeat center center;
+    background-size: contain;
+}
+
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 850px;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about-content {
+    width: 280px;
+}
+
+.about-paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C7482A;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.about-paragraph::before {
+    content: '';
+    position: absolute;
+    top: -12%;
+    left: -30%;
+    /* rotate: 127deg; */
+    width: 170px;
+    height: 150px;
+    background: url('Asset/images/lightning.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.about-paragraph::after {
+    content: '';
+    position: absolute;
+    top: -11%;
+    left: 78%;
+    /* rotate: 127deg; */
+    width: 150px;
+    height: 150px;
+    background: url('Asset/images/lightning-2.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.about-paragraph p {
+    font-size: 16px;
+    font-family: "Oswald";
+    font-weight: 300;
+    color: #E7B1C9;
+    margin: 5px;
+}
+
+.about-paragraph a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD500;
+    padding: 12px 0;
+    width: 100%;
+    border: 2px solid #242424;
+    margin-top: 10px;
+}
+
+.about-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.about-social a {
+    text-decoration: none;
+    color: #C7482A;
+    font-family: "Bebas Neue";
+    font-size: 50px;
+    border-left: 6px solid #C7482A;
+    padding-left: 15px;
+}
+
+/* Skill */
+
+.skills-inner {
+    background-color: #88E56B;
+}
+
+.skills-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.skills-title h1 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: clamp(190px, 26vw, 450px);
+    color: #000;
+    margin: 0;
+    position: relative;
+}
+
+.skills-title h1::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    /* left: 0%; */
+    width: 100px;
+    height: 100px;
+    background: url('Asset/images/Star-skills.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.skills-title h5 {
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    font-size: 150px;
+    color: #000;
+    margin: 0;
+}
+
+.skills-title-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.skills-title-2 h1 {
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    font-size: clamp(50px, 15vw, 300px);
+    color: #88E56B;
+    margin: 0;
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card-body {
+    border: 2px solid #000;
+    padding: 25px 20px;
+    height: 333px;
+    width: 428px;
+    max-width: 100%;
+}
+
+.card-body:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+
+.card-body:nth-child(1) {
+    border-left: none;
+}
+
+.card-body:nth-child(3) {
+    border-right: none;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 100%;
+}
+
+.card-inner p {
+    font-weight: 300;
+    font-size: clamp(8px, 1vw, 20px);
+    margin: 0;
+}
+
+.card-title {
+    width: 100%;
+}
+
+.card-title a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.card-title h1 {
+    font-family: "Bebas Neue";
+    font-size: clamp(20px, 1vw + 14px, 35px);
+    margin: 0;
+}
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-left: 25px solid #000;
+}
+
+.projects-title {
+    padding-top: 2px;
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+.projects-title h1 {
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+    color: #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.project-item {
+    padding-top: 2px;
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+.project-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 30px;
+    padding-left: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.project-item a svg {
+    width: 65px;
+    height: 65px;
+}
+
+/* Contact */
+.contact-container {
+    background-color: #E42424;
+}
+
+.contact-inner {
+    width: 100%;
+    height: 768px;
+    display: grid;
+    grid:
+        "contact-title contact-title-2 contact-title-2" auto "contact-title contact-form contact-title-3" 1fr "contact-title contact-form contact-title-3" auto / auto 1fr auto;
+    gap: 8px;
+}
+
+.contact-title {
+    grid-area: contact-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+
+.contact-title h1 {
+    font-family: 'Canterbury';
+    font-size: clamp(230px, 22vw, 270px);
+    color: #242424;
+    margin: 0;
+    rotate: -90deg;
+}
+
+.contact-title-2 {
+    grid-area: contact-title-2;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    margin-top: 2rem;
+}
+
+.contact-title-2 h4 {
+    font-family: 'Bebas Neue';
+    font-size: 110px;
+    color: #E42424;
+    margin: 0;
+}
+
+.contact-form {
+    grid-area: contact-form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form form label {
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 25px;
+    color: #242424;
+}
+
+.contact-form form input {
+    border-radius: 0 !important;
+    background-color: #E42424;
+    border: 2px solid #242424 !important;
+}
+
+.contact-form form textarea {
+    border-radius: 0 !important;
+    background-color: #E42424;
+    border: 2px solid #242424 !important;
+}
+
+.contact-form form input:focus {
+    background-color: #E42424 !important;
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+.contact-form form textarea:focus {
+    background-color: #E42424 !important;
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+.contact-form form p {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: .2rem;
+}
+
+.contact-form form button {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 30px;
+    width: 100%;
+    border: 2px solid #242424;
+    background-color: #242424;
+    color: #E42424;
+}
+
+.contact-title-3 {
+    grid-area: contact-title-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 210px;
+    overflow: hidden;
+}
+
+.contact-title-3 h1 {
+    font-family: 'Canterbury';
+    font-size: clamp(100px, 17vw, 270px);
+    color: #E42424;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #242424;
+    margin: 0;
+    rotate: 90deg;
+}
+
+
+@media (max-width:1160px) {
+    .skills-title {
+        justify-content: center;
+    }
+
+    .skills-title h5 {
+        display: none;
+    }
+
+    .about-inner {
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+    }
+
+    .about-title svg {
+        left: 72%;
+        top: -40%;
+        transform: rotate(357deg);
+    }
+
+    .about-title-2 {
+        display: none;
+    }
+
+    .about-social {
+        display: none;
+    }
+}
+
+@media (max-width:1100px) {
+    .contact-title-3 h1 {
+        display: none;
+    }
+}
+
+@media (max-width:950px) {
+
+    .card-inner svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact-title-2 h4 {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width:850px) {
+    .about-content {
+        width: 470px;
+    }
+
+    .about-paragraph p {
+        font-size: 23px;
+    }
+
+    .about-paragraph::before {
+        display: none;
+    }
+
+    .about-paragraph::after {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-container{
+        padding: 0 20px;
+    }
+    .navbar-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 88px;
+        left: 0;
+        background-color: #E1E1E1;
+        z-index: 10;
+    }
+
+    .navbar-items a {
+        border: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-inner {
+        position: relative;
+    }
+
+    .navbar-inner h1 {
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width:500px) {
+
+    .home-inner {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .grid-home-1 {
+        text-align: center;
+    }
+
+    .grid-home-2 {
+        grid-area: 3;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #242424;
+        overflow: hidden;
+    }
+
+    .skills-content {
+        flex-direction: column;
+    }
+
+    .card-body {
+        border: 2px solid #000;
+        padding: 10px 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-body:nth-child(2) {
+        border: none;
+    }
+
+    .card-body:nth-child(1) {
+        border-left: none;
+        border-right: none;
+    }
+
+    .card-body:nth-child(3) {
+        border-left: none;
+        border-right: none;
+    }
+
+    .contact-title h1 {
+        display: none;
+    }
+
+}
